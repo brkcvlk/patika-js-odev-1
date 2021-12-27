@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <style>
+        body {
+            background-color: rgba(51, 53, 52, 1);
+            color: rgba(232, 160, 36, 1);
+        }
+        #title {
+           margin-top: 50px;
+           margin-bottom: 0px;
+           margin-left: 650px;
+        }
+        #nick {
+            margin: 30px 580px;
+        }
+        #time {
+            margin-top: 6px ;
+            margin-left: 630px;
+            float: left;
+        }
+        #day {
+            margin-left: 25px;
+            margin-top: 5px;
+        }
+        #m-c{
+            display: flex;
+        }
+        #text {
+            margin-left: 230px;
+        }
+    
+
+    </style>
+    </head>
+<body>
+    <div>
+        <h2 id="title">KODLUYORUZ</h2>
+        <h2 id="nick"></h2>
+        <div id="m-c">
+            <h2 id="time"></h2>
+            <h2 id="day">Pazartesi</h2>
+        </div>
+        <h2 id="text">tarihinde Kodluyoruz Frontend Web Development Patika'sının JavaScript bölümü 1.Ödevindesiniz.</h2>
+    </div>
+    <script>
+
+        setInterval(myTimer, 1000);
+
+        function myTimer() {
+        const date = new Date();
+        document.getElementById("time").innerHTML = date.toLocaleTimeString();
+        }
+        
+
+        let userName = prompt("Adınız Nedir?");
+        if (userName != null) {
+            document.getElementById("nick").innerHTML = "Merhaba, " + userName.toString() + " !  Hoş Geldin!";
+        }
+
+    </script>
+</body>
+</html>
